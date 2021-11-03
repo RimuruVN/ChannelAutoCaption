@@ -17,7 +17,7 @@ from pyrogram.errors import FloodWait
 async def editing(bot, message):
     if (message.chat.type == "private"):
         if ("/set_cap" in message.text) and ((len(message.text.split(' ')) == 2) or (len(message.text.split(' ')) == 1)):
-            await message.reply_text("🖊️ 𝐒𝐄𝐓 𝐂𝐀𝐏𝐓𝐈𝐎𝐍 \n\nUse this command to set custom caption for any of your channels.\n\n👉 `/set_cap -1001448973320 My Caption`", quote = True)
+            await message.reply_text("🖊️ 𝐒𝐄𝐓 𝐂𝐀𝐏𝐓𝐈𝐎𝐍 \n\nSử dụng lệnh này để đặt phụ đề tùy chỉnh cho bất kỳ kênh nào của bạn.\n\n👉 `/set_cap -1001448973320 Chú thích của tôi`", quote = True)
         elif ("/set_cap" in message.text) and (len(message.text.split(' ')) != 2) and (len(message.text.split(' ')) != 1):
             caption = message.text.markdown.split(' ', 2)[2]
             channel = message.text.split(' ', 2)[1].replace("-100", "")
